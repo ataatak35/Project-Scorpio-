@@ -41,10 +41,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0055449605, y: 0.037635565}
+  m_Offset: {x: -0.0044369698, y: 0.03187889}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.049938917, y: 0.473104}
+  m_Size: {x: 0.0521549, y: 0.36315024}
   m_EdgeRadius: 0
 --- !u!1 &749009230867926728
 GameObject:
@@ -98,10 +98,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0055449605, y: 0.037635565}
+  m_Offset: {x: -0.0063759685, y: 0.03319919}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.049938917, y: 0.473104}
+  m_Size: {x: 0.051600933, y: 0.36579108}
   m_EdgeRadius: 0
 --- !u!1 &1332984810102129573
 GameObject:
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 494748059762885662}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

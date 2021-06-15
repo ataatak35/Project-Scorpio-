@@ -6,17 +6,20 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField]private Player playerScript;
-    
+    private float cameraSpeed = 1.5f;
+    private Vector3 desiredPosition;
+
     void Start()
     {
+        desiredPosition = transform.position;
         
     }
 
     
     private void Update()
     {
-
-
+        
+        
     }
 
     void LateUpdate()
@@ -24,13 +27,13 @@ public class FollowPlayer : MonoBehaviour
         
         if (playerScript.passedToAboveRoad)
         {
-            Vector3 desiredPosition = transform.position + new Vector3(0, 1.75f, 0);
-
-            transform.position = desiredPosition;
-
+           
+            desiredPosition = transform.position + new Vector3(0, 1.75f, 0);
             playerScript.passedToAboveRoad = false;
-
+            
         }
+        if(transform.position.y < desiredPosition.y)
+            transform.Translate(Vector2.up * cameraSpeed * Time.fixedDeltaTime);
         
     }
     

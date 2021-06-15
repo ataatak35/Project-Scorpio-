@@ -10,7 +10,7 @@ public class ScoreManager : Singleton<ScoreManager>
     protected ScoreManager() { }
 
     private float score;
-    [SerializeField] private Text scoreText;
+    [SerializeField] public Text scoreText;
 
     void Start()
     {

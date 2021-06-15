@@ -1,26 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
 
     [SerializeField] private float horizontalSpeed;
-    [SerializeField] private float jumpForce;
-    private Time firstPressed; 
-    private int jumpCount = 0;
+    [SerializeField] private float jumpVelocity;
+    private Player player;
     
     void Start()
     {
         horizontalSpeed = 3f;
-        jumpForce = 350f;
+        jumpVelocity =7f;
+        player = Player.Instance;
+
     }
 
     void Update()
     {
 
-        Jump();    
+        Jump();
         
     }
 
@@ -37,9 +39,18 @@ public class Movement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
-            jumpCount++;
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime,ForceMode2D.Impulse);
+            if (player.isGrounded)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+            }
+            else
+            {
+                if (player.canDoubleJump)
+                {
+                    GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+                    player.canDoubleJump = false;
+                }
+            }
             
         }
         

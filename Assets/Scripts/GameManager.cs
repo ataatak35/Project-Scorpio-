@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class GameManager : Singleton<GameManager>
@@ -13,7 +15,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Player player;
     private GameObject topRoad;
     private float distance = 1.75f;
-    
+
+
     void Start()
     {
         //5 tane yol oluştur
@@ -67,6 +70,8 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        
+
+        SceneManager.LoadScene(0);
+
     }
 }
