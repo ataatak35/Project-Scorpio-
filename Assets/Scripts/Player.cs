@@ -48,8 +48,8 @@ public class Player : Singleton<Player>
             GameObject leftObstacle = parent.transform.GetChild(4).gameObject;
             GameObject rightObstacle = parent.transform.GetChild(3).gameObject;
             
-            Destroy(leftObstacle);
-            Destroy(rightObstacle);
+            //Destroy(leftObstacle);
+            //Destroy(rightObstacle);
             Destroy(other);
 
             if(passCount > 0)
@@ -58,6 +58,13 @@ public class Player : Singleton<Player>
             passCount++;
             
             ScoreManager.Instance.AddPointsToScore();
+            
+        }
+
+        if (other.name == "Road Destroyer")
+        {
+            
+            GameManager.Instance.GameOver();
             
         }
 
